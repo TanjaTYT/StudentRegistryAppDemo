@@ -9,7 +9,7 @@ pipeline{
     stages{
         stage('Checkout'){
             steps{
-                git branches: 'main', irl: 'https://github.com/TanjaTYT/StudentRegistryAppDemo'
+                git branch: 'main', url: 'https://github.com/TanjaTYT/StudentRegistryAppDemo'
             }
         }
         stage("Install dependencies"){
@@ -30,7 +30,7 @@ pipeline{
         }
     }
     post{
-         alweys{
+         always{
             echo 'CI pipeline completed'
         }
     }
